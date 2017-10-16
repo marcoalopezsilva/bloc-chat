@@ -1,7 +1,8 @@
-.nav {
+.nav-container {
     width: 30%;
+    height: 5vh;
     background-color: rgb(73, 115, 153);
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     font-size: 1.25rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -10,7 +11,7 @@
 
 .rooms-list {
     width: 30%;
-    height: calc(100vh - 140px);
+    height: calc(95vh - 60px);
     background-color: rgb(159, 204, 244);
     padding: 20px;
     font-size: 1rem;
@@ -21,5 +22,9 @@
 .detail {
     text-indent: 20px;
     font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.rooms-list p {
     font-weight: normal;
 }
