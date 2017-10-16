@@ -1,11 +1,12 @@
 (function() {
 
-    function HomeCtrl() {
-    // Pending code
+    function HomeCtrl(Room) {
+        this.Welcome = 'Available Chat Rooms:';
+        this.RoomArray = Room;
     };
 
     angular
         .module ('marcosBlocChat')
-        .controller('HomeCtrl', [HomeCtrl]);
+        .controller('HomeCtrl', ['Room', HomeCtrl]);
 
 }) ();
