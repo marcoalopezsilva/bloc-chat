@@ -5,17 +5,8 @@
             <!--p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et felis elit.</p-->
 
             <!-- Junior: This is the line that doesn't work-->
-            <section class="detail" ng-repeat "roomNum in home.RoomArray.all track by $index">
+            <section class="detail" ng-repeat = "roomNum in home.Room.all track by $index">
                 <p> {{ roomNum["$value"] }} </p>
             </section>
-
-            <!-- Junior: To see if I was understanding the type appropriately, i wrote iths (which works)-->
-            <section class="detail">
-                <p> Check </p>
-                <p> all: {{ home.RoomArray.all }} </p>
-                <p> 0: {{ home.RoomArray.all[0]["$value"] }} </p>
-                <p> 1: {{ home.RoomArray.all[1]["$value"] }} </p>
-                <p> 2: {{ home.RoomArray.all[2]["$value"] }} </p>
-            </section>
-        </div>
+    </div>
 </main>

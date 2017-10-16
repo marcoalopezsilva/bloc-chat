@@ -2,7 +2,7 @@
 
     function HomeCtrl(Room) {
         this.Welcome = 'Available Chat Rooms:';
-        this.RoomArray = Room;
+        this.Room = Room;
     };
 
     angular
