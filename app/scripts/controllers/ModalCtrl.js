@@ -13,6 +13,7 @@
 
             modalInstance.result.then(function(res) {
                 $scope.outcome = res;
+                console.log("outcome is: " + $scope.outcome);
             });
         };
 

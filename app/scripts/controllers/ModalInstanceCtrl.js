@@ -8,10 +8,10 @@
             $uibModalInstance.dismiss();
         };
 
-        $scope.add = function () {
+        $scope.addNew = function () {
             $scope.message = "Room addition requested";
             console.log($scope.message);
-            $scope.addRoom($scope.newRoom);
+            $scope.add($scope.newRoom);
         };
     };
 

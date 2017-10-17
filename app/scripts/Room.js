@@ -10,8 +10,8 @@
 
         Room.all = rooms;
 
-        Room.addRoom = function(room) {
-            console.log("addRoom function called");
+        Room.add = function(room) {
+            console.log("add Room function called");
             //I still have to modify this
             //rooms.$add({ foo: "bar" }).then(function(room) {
             //    var id = room.key;
