@@ -1,13 +1,15 @@
 <main>
-    <div class="rooms-list">
+    <div class="rooms-list" ng-controller="HomeCtrl">
         {{ home.Welcome }}
             <!-- This Lorem Ipsum I just used to check that the container was working properly. Then I commented it out -->
             <!--p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et felis elit.</p-->
 
             <!-- Junior: This is the line that doesn't work-->
-            <section class="detail" ng-repeat = "roomNum in home.Room.all track by $index">
+            <section class="detail"  ng-repeat = "roomNum in home.rooms track by $index">
                 <p> {{ roomNum["$value"] }} </p>
             </section>
-            <p> Add button will go here </p>
-    </div>
+        </div>
+        <div class="rooms-list-buttons" ng-controller= "ModalCtrl">
+            <section class="temp-button" ng-click="open()">New Room</section>
+        </div>
 </main>

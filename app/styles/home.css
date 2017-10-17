@@ -7,11 +7,12 @@
     font-weight: bold;
     text-transform: uppercase;
     margin: 0px;
+    cursor: auto;
 }
 
 .rooms-list {
     width: 30%;
-    height: calc(95vh - 60px);
+    min-height: 20vh;
     background-color: rgb(159, 204, 244);
     padding: 20px;
     font-size: 1rem;
@@ -25,6 +26,23 @@
     font-weight: normal;
 }
 
-.rooms-list p {
+.rooms-list-buttons {
+    width: 30%;
+    height: 50vh;
+    background-color: rgb(159, 204, 244);
+    padding: 20px;
+    font-size: 1rem;
+    text-transform: none;
+    font-weight: bold;
+}
+.temp-button {
+    cursor: pointer;
+    font-size: 0.8rem;
     font-weight: normal;
+    text-align: center;
+    background-color: lightgrey;
+    padding: 5px;
+    margin-left: 70%;
+    width: 25%;
+    box-shadow: 2px 2px grey;
 }

@@ -15,7 +15,7 @@
     }
 
     angular
-        .module('marcosBlocChat', ['ui.router','firebase'])
+        .module('marcosBlocChat', ['ui.bootstrap','ui.router','firebase'])
         .config(config);
-        
+
 })();
