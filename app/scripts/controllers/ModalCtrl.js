@@ -12,7 +12,12 @@
             });
 
             modalInstance.result.then(function(res) {
+<<<<<<< HEAD
                 $scope.someVariable = res;
+=======
+                $scope.outcome = res;
+                console.log("outcome is: " + $scope.outcome);
+>>>>>>> 891f4d5699810c9f84c74d68dc04cde53b351cde
             });
         };
 

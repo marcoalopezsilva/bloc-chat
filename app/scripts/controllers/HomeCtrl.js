@@ -3,7 +3,7 @@
     function HomeCtrl(Room) {
         this.Welcome = 'Available Chat Rooms:';
         this.rooms = Room.all;
-        this.addRoom = Room.addRoom;
+        this.add = Room.add;
     };
 
     angular
