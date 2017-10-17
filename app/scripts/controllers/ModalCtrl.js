@@ -12,10 +12,11 @@
             });
 
             modalInstance.result.then(function(res) {
-                $scope.outcome = res;
+                $scope.someVariable = res;
             });
         };
 
+        console.log($scope);
     };
 
     angular

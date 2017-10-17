@@ -1,10 +1,9 @@
 <main>
-    <div class="rooms-list" ng-controller="HomeCtrl">
+    <div class="rooms-list" ng-controller="HomeCtrl as home">
         {{ home.Welcome }}
             <!-- This Lorem Ipsum I just used to check that the container was working properly. Then I commented it out -->
             <!--p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et felis elit.</p-->
 
-            <!-- Junior: This is the line that doesn't work-->
             <section class="detail"  ng-repeat = "roomNum in home.rooms track by $index">
                 <p> {{ roomNum["$value"] }} </p>
             </section>

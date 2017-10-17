@@ -10,14 +10,9 @@
 
         Room.all = rooms;
 
-        Room.addRoom = function(room) {
-            console.log("addRoom function called");
-            //I still have to modify this
-            //rooms.$add({ foo: "bar" }).then(function(room) {
-            //    var id = room.key;
-            //    console.log("Added record with id " + id);
-            //    list.$indexFor(id);
-            //});
+        Room.addRoom = function (room) {
+            console.log("addRoom function called with argument: " + room);
+            // Pending code
         };
 
         return Room;
