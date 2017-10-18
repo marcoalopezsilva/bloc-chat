@@ -12,7 +12,13 @@
 
         Room.addRoom = function (room) {
             console.log("addRoom function called with argument: " + room);
-            // Pending code
+            var list = $firebaseArray(ref);
+            list.$add({ $value: room }).then(function(ref) {
+                var id = ref.key;
+                console.log("added record with id " + id);
+                list.$indexFor(id); // returns location in the array
+                console.log(list);
+            });
         };
 
         return Room;

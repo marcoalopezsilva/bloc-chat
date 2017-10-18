@@ -1,14 +1,11 @@
 <main>
     <div class="rooms-list" ng-controller="HomeCtrl as home">
-        {{ home.Welcome }}
-            <!-- This Lorem Ipsum I just used to check that the container was working properly. Then I commented it out -->
-            <!--p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et felis elit.</p-->
-
-            <section class="detail"  ng-repeat = "roomNum in home.rooms track by $index">
-                <p> {{ roomNum["$value"] }} </p>
-            </section>
-        </div>
-        <div class="rooms-list-buttons" ng-controller= "ModalCtrl">
-            <section class="temp-button" ng-click="open()">New Room</section>
-        </div>
+        <p class="rooms-title">{{ home.Welcome }} </p>
+        <section class="detail"  ng-repeat = "roomNum in home.rooms track by $index">
+            <p> {{ roomNum["$value"] }} </p>
+        </section>
+    </div>
+    <div class="rooms-list-buttons" ng-controller= "ModalCtrl">
+        <section class="temp-button" ng-click="open()">New Room</section>
+    </div>
 </main>

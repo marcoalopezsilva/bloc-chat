@@ -16,7 +16,7 @@
             });
         };
 
-        console.log($scope);
+        //console.log($scope);
     };
 
     angular

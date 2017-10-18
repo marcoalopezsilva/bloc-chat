@@ -1,13 +1,19 @@
 .nav-container {
     width: 30%;
-    height: 5vh;
+    height: 10vh;
     background-color: rgb(73, 115, 153);
     padding: 20px 20px 0 20px;
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-transform: uppercase;
     margin: 0px;
     cursor: auto;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;;
+}
+
+.rooms-title {
+    font-size: 1.0rem;
+    font-weight: bold;
+    text-transform: none;
 }
 
 .rooms-list {
@@ -35,6 +41,7 @@
     text-transform: none;
     font-weight: bold;
 }
+
 .temp-button {
     cursor: pointer;
     font-size: 0.8rem;
@@ -45,4 +52,30 @@
     margin-left: 70%;
     width: 25%;
     box-shadow: 2px 2px grey;
+}
+
+.modal-header {
+    background-color: rgb(159, 204, 244);
+    padding: 10px;
+    font-size: 1rem;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.modal-body .label {
+    font-size: 1rem;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.form-control {
+    font-size: 0.8rem;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.button-primary {
+    font-size: 0.8rem;
+    text-transform: none;
+    font-weight: normal;
 }
