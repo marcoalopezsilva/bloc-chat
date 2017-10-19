@@ -11,9 +11,10 @@
                 scope: $scope
             });
 
-            modalInstance.result.then(function(res) {
-                $scope.someVariable = res;
-            });
+            // Explanation by Junior: This makes sure that the modal is finished, then does something
+            //modalInstance.result.then(function(res) {
+            //    $scope.someVariable = res;
+            //});
         };
 
         //console.log($scope);

@@ -1,45 +1,44 @@
 .nav-container {
+    position: fixed;
     width: 30%;
-    height: 10vh;
+    height: 100vh;
+    margin: 0px;
+    cursor: auto;
+}
+
+.nav-container-title {
+    width: 30%;
+    position: fixed;
+    height:80px;
     background-color: rgb(73, 115, 153);
     padding: 20px 20px 0 20px;
     margin: 0px;
-    cursor: auto;
     font-size: 1.25rem;
     font-weight: bold;
-    text-transform: uppercase;;
-}
-
-.rooms-title {
-    font-size: 1.0rem;
-    font-weight: bold;
-    text-transform: none;
+    text-transform: uppercase;
 }
 
 .rooms-list {
+    top: 80px;
+    position: fixed;
     width: 30%;
-    min-height: 20vh;
+    min-height: 80vh;
     background-color: rgb(159, 204, 244);
     padding: 20px;
-    font-size: 1rem;
-    text-transform: none;
+    cursor: auto;
+}
+
+.rooms-list-title {
+    font-size: 1.0rem;
     font-weight: bold;
+    text-transform: none;
 }
 
 .detail {
     text-indent: 20px;
     font-size: 0.8rem;
     font-weight: normal;
-}
-
-.rooms-list-buttons {
-    width: 30%;
-    height: 50vh;
-    background-color: rgb(159, 204, 244);
-    padding: 20px;
-    font-size: 1rem;
-    text-transform: none;
-    font-weight: bold;
+    cursor: pointer;
 }
 
 .temp-button {
@@ -52,6 +51,7 @@
     margin-left: 70%;
     width: 25%;
     box-shadow: 2px 2px grey;
+    z-index:100;
 }
 
 .modal-header {
@@ -78,4 +78,15 @@
     font-size: 0.8rem;
     text-transform: none;
     font-weight: normal;
+}
+
+.room-chat-container {
+    position: absolute;
+    left: 30%;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    padding: 20px 20px 0 20px;
+    margin: 0px;
+    cursor: auto;
 }
