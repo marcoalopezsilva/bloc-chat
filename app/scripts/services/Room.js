@@ -1,7 +1,10 @@
 (function() {
 
     function Room($firebaseArray) {
+
         var Room = {};
+        var tempHolder = null;
+
         // Q: Next line sets a path starting at the "rooms" location of the database?
         var ref = firebase.database().ref().child("rooms");
         // $firebaseArray returns a JavaScript array which contains the data at the provided location in Firebase and some extra AngularFire-specific fields
@@ -21,7 +24,18 @@
             });
         };
 
+        Room.getRoomId = function(roomName) {
+            ref.orderByValue().equalTo(roomName).on('value', function(snapshot) {
+                snapshot.forEach(function(data) {
+                    console.log("This room's $id is: " + data.key);
+                    tempHolder = data.key;
+                    });
+                });
+            return tempHolder;
+        };
+
         return Room;
+
     };
 
     angular

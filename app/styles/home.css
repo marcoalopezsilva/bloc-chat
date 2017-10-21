@@ -32,6 +32,7 @@
     font-size: 1.0rem;
     font-weight: bold;
     text-transform: none;
+    padding-bottom: 5px;
 }
 
 .detail {
@@ -46,7 +47,7 @@
     font-size: 0.8rem;
     font-weight: normal;
     text-align: center;
-    background-color: lightgrey;
+    background-color: rgb(242, 242, 242);
     padding: 5px;
     margin-left: 70%;
     width: 25%;
@@ -89,4 +90,25 @@
     padding: 20px 20px 0 20px;
     margin: 0px;
     cursor: auto;
+}
+
+.message-single-container {
+    background-color: lightgrey;
+    border-top: 1px solid black;
+    padding: 0 5px 0 5px;
+}
+
+.message-sent-at {
+    font-style: italic;
+    text-align: right;
+}
+
+.message-username {
+    font-weight: bold;
+    text-align: left;
+}
+
+.message-content {
+    font-weight: normal;
+    text-align:left;
 }

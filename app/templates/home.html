@@ -13,6 +13,10 @@
         <section>
             <p class="rooms-list-title"> {{home.currentRoomName}} </p>
         </section>
-            <p class="rooms-list-title"> {{home.getByRoomId(home.currentRoomName)}} </p>
+        <section class="message-single-container" ng-repeat = "message in home.getMessagesByRoomId track by $index">
+            <p class="message-sent-at"> {{message.sentAt}} </p>
+            <p class="message-username"> {{message.username}} </p>
+            <p class= "message-content"> {{message.content}}</p>
+        </section>
     </div>
 </main>
