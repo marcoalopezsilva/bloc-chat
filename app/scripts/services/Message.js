@@ -12,12 +12,13 @@
         Message.getByRoomId = function(roomId) {
             console.log("getByRoomId function called with " + roomId);
             console.log("Will find messages if there are any -->");
-            // In next line, "roomId" as argument or orderByChild refers to the key at the database; whereas 'roomId' at .equalTo refers to the function's argument (a variable)
-            ref.orderByChild("roomId").equalTo(roomId).on('value', function(snapshot){
-                tempHolder = snapshot.val();
-                console.log(tempHolder);
-            });
-            return tempHolder;
+            // Simplified the thing, as per Junior's advice. We don't need to listen for changes right now ->
+            //ref.orderByChild("roomId").equalTo(roomId).on('value', function(snapshot){
+            //    tempHolder = snapshot.val();
+            //    console.log(tempHolder);
+            //});
+            //return tempHolder;
+            return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
         };
 
         return Message;

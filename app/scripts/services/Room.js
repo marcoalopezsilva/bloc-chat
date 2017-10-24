@@ -3,7 +3,7 @@
     function Room($firebaseArray) {
 
         var Room = {};
-        var tempHolder = null;
+        //var tempHolder = null;
 
         // Q: Next line sets a path starting at the "rooms" location of the database?
         var ref = firebase.database().ref().child("rooms");
@@ -24,15 +24,16 @@
             });
         };
 
-        Room.getRoomId = function(roomName) {
-            ref.orderByValue().equalTo(roomName).on('value', function(snapshot) {
-                snapshot.forEach(function(data) {
-                    console.log("This room's $id is: " + data.key);
-                    tempHolder = data.key;
-                    });
-                });
-            return tempHolder;
-        };
+        //There is no need for next function anymore, as I passed the entire array (Junior's advice)
+        //Room.getRoomId = function(roomName) {
+        //    ref.orderByValue().equalTo(roomName).on('value', function(snapshot) {
+        //        snapshot.forEach(function(data) {
+        //            console.log("This room's $id is: " + data.key);
+        //            tempHolder = data.key;
+        //            });
+        //        });
+        //    return tempHolder;
+        //};
 
         return Room;
 

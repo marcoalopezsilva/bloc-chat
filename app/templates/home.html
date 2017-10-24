@@ -3,7 +3,9 @@
     <div class="rooms-list">
         <p class="rooms-list-title">{{ home.Welcome }} </p>
         <section class="detail"  ng-repeat = "roomNum in home.rooms track by $index">
-            <p ng-click="home.roomClick(roomNum.$value)"> {{ roomNum.$value }} </p>
+            <!-- Junior advised me to pass the entire roomNum object instead of only roomNum.$value. This passes $id, and eliminates the need to get the latter separately (as I had coded)-->
+            <!--p ng-click="home.roomClick(roomNum.$value)"> {{ roomNum.$value }} </p-->
+            <p ng-click="home.roomClick(roomNum)"> {{ roomNum.$value }} </p>
         </section>
         <div ng-controller= "ModalCtrl">
             <section class="temp-button" ng-click="open()">New Room</section>
