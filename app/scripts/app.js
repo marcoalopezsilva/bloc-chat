@@ -28,7 +28,7 @@
         if (!currentUser || currentUser ==='') {
             $uibModal.open({
                 templateUrl: '/templates/modalNewUser.html',
-                controller: 'ModalInstanceCtrl2',
+                controller: 'ModalInstanceCtrl',
                 // Junior: I included these two lines to prevent the user from closing the modal by clicking on the background (googled it)
                 backdrop: 'static',
                 keyboard: false
