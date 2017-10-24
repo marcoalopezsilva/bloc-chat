@@ -112,3 +112,7 @@
     font-weight: normal;
     text-align:left;
 }
+
+.error-message {
+    color: red;
+}

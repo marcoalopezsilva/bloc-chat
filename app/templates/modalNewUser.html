@@ -1,0 +1,11 @@
+<div class="modal-header">
+    <h3 class="modal-title"> Set a username </h3>
+</div>
+<div class ="modal-body">
+    <label>This name will appear when you send messages: </label>
+    <input type="text" class="form-control" ng-model="newUsername" required>
+    <p class="error-message"> {{errorMessage}} </p>
+</div>
+<div class ="modal-footer">
+    <button class="button-primary" type="button" ng-click="addNewUser()">Set username</button>
+</div>

@@ -18,7 +18,9 @@
             //    console.log(tempHolder);
             //});
             //return tempHolder;
-            return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+            tempHolder = $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+            console.log(tempHolder);
+            return tempHolder;
         };
 
         return Message;
