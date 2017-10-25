@@ -1,10 +1,9 @@
 (function () {
 
-    function Message($firebaseArray) {
+    function Message($firebaseArray, $cookies) {
 
         var Message = {};
         var tempHolder = null;
-        var tempHolder2 = null;
 
         var ref = firebase.database().ref().child("messages");
         var messages = $firebaseArray(ref);
@@ -12,21 +11,26 @@
         Message.getByRoomId = function(roomId) {
             console.log("getByRoomId function called with " + roomId);
             console.log("Will find messages if there are any -->");
-            // Simplified the thing, as per Junior's advice. We don't need to listen for changes right now ->
-            //ref.orderByChild("roomId").equalTo(roomId).on('value', function(snapshot){
-            //    tempHolder = snapshot.val();
-            //    console.log(tempHolder);
-            //});
-            //return tempHolder;
             tempHolder = $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
             console.log(tempHolder);
             return tempHolder;
         };
 
-        Message.send = function(newMessage) {
-            console.log("Message.send function called");
-            // Code pending
-
+        Message.send = function (newMessage, linkedRoom) {
+            console.log("Message.send function called with argument: " + newMessage);
+            var today = new Date();
+            var hours = today.getHours();
+            if (hours < 10) {
+                var hoursString = '0'+ hours;
+            } else { var hoursString = hours };
+            var mins = today.getMinutes();
+            if (mins < 10) {
+                var minsString = '0' + mins;
+            } else { var minsString = mins };
+            var time = hoursString + ':' + minsString;
+            console.log(time);
+            var currentUser = $cookies.get('blocChatCurrentUser');
+            messages.$add({ content: newMessage, username: currentUser, roomId: linkedRoom, sentAt: time });
         };
 
         return Message;
@@ -34,5 +38,5 @@
 
     angular
         .module('marcosBlocChat')
-        .factory('Message', ['$firebaseArray', Message]);
+        .factory('Message', ['$firebaseArray', '$cookies', Message]);
 }) ();

@@ -22,7 +22,7 @@
     top: 80px;
     position: fixed;
     width: 30%;
-    min-height: 80vh;
+    min-height: 85vh;
     background-color: rgb(159, 204, 244);
     padding: 20px;
     cursor: auto;
@@ -119,9 +119,22 @@
 
 .message-compose {
     position: fixed;
-    bottom: 0pX;
+    bottom: 0px;
+    padding-bottom: 25px;
 }
 
 .text-input-window {
-    width: 200%;
+    width: 60vw;
+    height: 3rem;
+}
+
+.send-button {
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(242, 242, 242);
+    padding: 5px;
+    box-shadow: 2px 2px grey;
+    z-index:100;
 }

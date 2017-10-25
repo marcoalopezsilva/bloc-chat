@@ -13,7 +13,7 @@
     </div>
     <div class="room-chat-container">
         <section>
-            <p class="rooms-list-title"> {{home.currentRoomName}} </p>
+            <p class="rooms-list-title"> {{home.activeRoomName}} </p>
         </section>
         <section class="message-single-container" ng-repeat = "message in home.getMessagesByRoomId track by $index">
             <p class="message-sent-at"> {{message.sentAt}} </p>
@@ -21,9 +21,10 @@
             <p class= "message-content"> {{message.content}}</p>
         </section>
     <div class="message-compose">
-        <form>
-        <input class="text-input-window" type="text" ng-model="newMessageToSend">
-        <button ng-click="send(newMessage)">Send</button>
+        <form name="messageSenderForm" ng-submit="home.sendMessage(messageToSend)">
+        <p class="error-message"> {{home.errorMessage}} </p>
+        <input class="text-input-window" type="text" ng-model="messageToSend" placeholder="Write your message here..."/>
+        <button class="send-button" type="submit">Send</button>
         </form>
     </div>
     </div>

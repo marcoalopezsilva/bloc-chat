@@ -4,15 +4,23 @@
         this.Welcome = 'Available Chat Rooms:';
         this.rooms = Room.all;
         this.roomClick = function (roomClicked) {
+            this.errorMessage = null;
             console.log("Room " + roomClicked + " clicked");
-            // Next 3 lines I removed as per Junior's advise
-            //this.currentRoomName = roomClicked;
-            //this.currentRoomId = Room.getRoomId(roomClicked);
-            //this.getMessagesByRoomId = Message.getByRoomId(this.currentRoomId);
+            this.activeRoom = roomClicked.$id;
+            this.activeRoomName = roomClicked.$value;
             this.getMessagesByRoomId = Message.getByRoomId(roomClicked.$id);
             };
-        this.send = Message.send(this.newMessageToSend);
-    };
+        this.sendMessage = function(messageToPass) {
+            if (!this.activeRoom) {
+                this.errorMessage = "Please select a room first!"
+                } else {
+                    console.log("home.sendMessage function called; message to pass: " + messageToPass);
+                    Message.send(messageToPass, this.activeRoom);
+                    // Junior: This line doesn't work as expected...
+                    this.messageSenderForm.reset();
+                    };
+            };
+        };
 
     angular
         .module ('marcosBlocChat')
