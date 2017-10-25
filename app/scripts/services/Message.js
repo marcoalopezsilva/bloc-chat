@@ -23,6 +23,12 @@
             return tempHolder;
         };
 
+        Message.send = function(newMessage) {
+            console.log("Message.send function called");
+            // Code pending
+
+        };
+
         return Message;
     };
 

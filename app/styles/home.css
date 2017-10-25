@@ -116,3 +116,12 @@
 .error-message {
     color: red;
 }
+
+.message-compose {
+    position: fixed;
+    bottom: 0pX;
+}
+
+.text-input-window {
+    width: 200%;
+}

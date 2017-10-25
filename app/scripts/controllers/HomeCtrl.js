@@ -11,6 +11,7 @@
             //this.getMessagesByRoomId = Message.getByRoomId(this.currentRoomId);
             this.getMessagesByRoomId = Message.getByRoomId(roomClicked.$id);
             };
+        this.send = Message.send(this.newMessageToSend);
     };
 
     angular

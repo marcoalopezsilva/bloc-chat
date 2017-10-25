@@ -20,5 +20,11 @@
             <p class="message-username"> {{message.username}} </p>
             <p class= "message-content"> {{message.content}}</p>
         </section>
+    <div class="message-compose">
+        <form>
+        <input class="text-input-window" type="text" ng-model="newMessageToSend">
+        <button ng-click="send(newMessage)">Send</button>
+        </form>
+    </div>
     </div>
 </main>
