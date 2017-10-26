@@ -16,14 +16,15 @@
             <p class="rooms-list-title"> {{home.activeRoomName}} </p>
         </section>
         <section class="message-single-container" ng-repeat = "message in home.getMessagesByRoomId track by $index">
-            <p class="message-sent-at"> {{message.sentAt}} </p>
+            <p class="message-sent-at"> {{message.sentAt | date: 'hh:mm a'}} </p>
             <p class="message-username"> {{message.username}} </p>
             <p class= "message-content"> {{message.content}}</p>
         </section>
-    <div class="message-compose">
-        <form name="messageSenderForm" ng-submit="home.sendMessage(messageToSend)">
-        <p class="error-message"> {{home.errorMessage}} </p>
-        <input class="text-input-window" type="text" ng-model="messageToSend" placeholder="Write your message here..."/>
+    <!-- In next line, ng-hide="!home.activeRoom" hides the whole div if home.activeRoom is falsy-->
+    <div class="message-compose" ng-hide="!home.activeRoom">
+        <form name="messageSenderForm" ng-submit="home.sendMessage()">
+        <!-- In the next line, by writing home.inputMessage (instead of inputMessage) we make the variable available to the controller (HomeCtrl.js) because of two-way binding. And so we don't have to pass it as an argument at ng-submit-->
+        <input class="text-input-window" type="text" ng-model="home.inputMessage" placeholder="Write your message here..."/>
         <button class="send-button" type="submit">Send</button>
         </form>
     </div>

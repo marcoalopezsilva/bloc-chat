@@ -24,6 +24,7 @@
 (function() {
 
     function BlocChatCookies($cookies, $uibModal) {
+        // I originally made currentUser a global variable; Junior advised me to keep it local and recreate it at HomeCtrl.js by injecting $cookie at the latter. This is sa safety against someone inadvertedly modifying currentUser elsewhere
         var currentUser = $cookies.get('blocChatCurrentUser');
         if (!currentUser || currentUser ==='') {
             $uibModal.open({
@@ -32,7 +33,6 @@
                 // Junior: I included these two lines to prevent the user from closing the modal by clicking on the background (googled it)
                 backdrop: 'static',
                 keyboard: false
-                //scope: $scope
             });
         };
     }

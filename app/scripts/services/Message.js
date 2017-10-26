@@ -16,21 +16,9 @@
             return tempHolder;
         };
 
-        Message.send = function (newMessage, linkedRoom) {
-            console.log("Message.send function called with argument: " + newMessage);
-            var today = new Date();
-            var hours = today.getHours();
-            if (hours < 10) {
-                var hoursString = '0'+ hours;
-            } else { var hoursString = hours };
-            var mins = today.getMinutes();
-            if (mins < 10) {
-                var minsString = '0' + mins;
-            } else { var minsString = mins };
-            var time = hoursString + ':' + minsString;
-            console.log(time);
-            var currentUser = $cookies.get('blocChatCurrentUser');
-            messages.$add({ content: newMessage, username: currentUser, roomId: linkedRoom, sentAt: time });
+        Message.send = function (messageToSend) {
+            console.log("Message.send function called with argument: " + messageToSend.content);
+            messages.$add(messageToSend);
         };
 
         return Message;
