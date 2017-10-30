@@ -15,7 +15,7 @@
     }
 
     angular
-        .module('marcosBlocChat', ['ui.bootstrap','ui.router','firebase','ngCookies'])
+        .module('marcosBlocChat', ['ui.bootstrap','ui.router','firebase','ngCookies', 'luegg.directives'])
         .config(config);
 
 })();

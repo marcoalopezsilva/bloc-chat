@@ -85,11 +85,12 @@
     position: absolute;
     left: 30%;
     width: 70%;
-    height: 100vh;
+    height: 87vh;
     background-color: white;
     padding: 20px 20px 0 20px;
     margin: 0px;
     cursor: auto;
+    overflow-y: scroll;
 }
 
 .message-single-container {

@@ -11,7 +11,7 @@
             <section class="temp-button" ng-click="openNewRoom()">New Room</section>
         </div>
     </div>
-    <div class="room-chat-container">
+    <div class="room-chat-container" scroll-glue-top>
         <section>
             <p class="rooms-list-title"> {{home.activeRoomName}} </p>
         </section>
@@ -20,13 +20,13 @@
             <p class="message-username"> {{message.username}} </p>
             <p class= "message-content"> {{message.content}}</p>
         </section>
-    <!-- In next line, ng-hide="!home.activeRoom" hides the whole div if home.activeRoom is falsy-->
-    <div class="message-compose" ng-hide="!home.activeRoom">
-        <form name="messageSenderForm" ng-submit="home.sendMessage()">
-        <!-- In the next line, by writing home.inputMessage (instead of inputMessage) we make the variable available to the controller (HomeCtrl.js) because of two-way binding. And so we don't have to pass it as an argument at ng-submit-->
-        <input class="text-input-window" type="text" ng-model="home.inputMessage" placeholder="Write your message here..."/>
-        <button class="send-button" type="submit">Send</button>
-        </form>
-    </div>
+        <!-- In next line, ng-hide="!home.activeRoom" hides the whole div if home.activeRoom is falsy-->
+        <section class="message-compose" ng-hide="!home.activeRoom">
+            <form name="messageSenderForm" ng-submit="home.sendMessage()">
+            <!-- In the next line, by writing home.inputMessage (instead of inputMessage) we make the variable available to the controller (HomeCtrl.js) because of two-way binding. And so we don't have to pass it as an argument at ng-submit-->
+            <input class="text-input-window" type="text" ng-model="home.inputMessage" placeholder="Write your message here..."/>
+            <button class="send-button" type="submit">Send</button>
+            </form>
+        </section>
     </div>
 </main>
