@@ -11,7 +11,8 @@
             <section class="temp-button" ng-click="openNewRoom()">New Room</section>
         </div>
     </div>
-    <div class="room-chat-container" scroll-glue-top>
+    <!-- The scroll-glue-bottom directive shows the last message (makes the list "stick" at the bottom, instead of the top. See: https://github.com/Luegg/angularjs-scroll-glue )-->
+    <div class="room-chat-container" scroll-glue-bottom>
         <section>
             <p class="rooms-list-title"> {{home.activeRoomName}} </p>
         </section>
